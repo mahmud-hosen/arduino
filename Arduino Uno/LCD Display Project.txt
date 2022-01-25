@@ -1,0 +1,16 @@
+#include<LiquidCrystal.h>
+int contrast=75;
+LiquidCrystal led(12,11,5,4,3,2); 
+
+void setup()
+{
+  analogWrite(6,contrast);
+  led.begin(16,2);
+}
+void loop()
+{
+  led.setCursor(0,0);
+  led.print("MAHMUD HOSSAIN");
+  led.setCursor(0,1);
+  led.print("ID: 181-15-1862");
+}
